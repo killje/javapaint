@@ -10,14 +10,22 @@ package edu.rug.gogp.javapaint;
  */
 public class Circle extends Shape {
 
-        @Override
-        public void draw(PaintContainer pc, int xOffset, int yOffset) {
-            if (filled) {
-                pc.getDrawingArea().fillRect(xOffset + posx, yOffset + posy, w, h);
-            } else {
-                pc.getDrawingArea().drawRect(xOffset + posx, yOffset + posy, w, h);
-            }
-            pc.getDrawingArea().setColor(color);
-            pc.repaint();
-        }
+    int posX, posY, radius;
+
+    public Circle(int x, int y, int radius) {
+        posX = x;
+        posY = y;
+        this.radius = radius;
     }
+
+    @Override
+    public void draw(PaintContainer pc, int xOffset, int yOffset) {
+        pc.getDrawingArea().setColor(color);
+        if (isFilled()) {
+            pc.getDrawingArea().fillOval(xOffset + posX - radius, yOffset + posY - radius, radius * 2, radius * 2);
+        } else {
+            pc.getDrawingArea().drawOval(xOffset + posX - radius, yOffset + posY - radius, radius * 2, radius * 2);
+        }
+        pc.repaint();
+    }
+}

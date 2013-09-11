@@ -22,30 +22,26 @@ public abstract class Shape {
      * The position of the shape (center for circles, top-left corner for
      * squares and rectangles.
      */
-    protected int posx, posy;
 
     /*
      * The width and height rectangles.
      */
-    protected int w, h;
 
     /*
      * Corner coordinates for triangles and quadrangles.
      */
-    protected int[] xCoords;
-    protected int[] yCoords;
 
     /*
      * Radius for circles
      */
-    protected int cradius;
+    
     /**
      * * Shape properties **
      */
     /*
      * Specifies whether this shape should be outlined or filled.
      */
-    protected boolean filled = false;
+    private boolean filled = false;
 
     /*
      * The color of the shape
@@ -59,54 +55,11 @@ public abstract class Shape {
     }
 
     /**
-     * Set a circle definition for this shape
-     *
-     * @param x The x coordinate of the circle center
-     * @param y The y coordinate of the circle center
-     * @param radius The radius of the circle
-     */
-    public void setCircle(int x, int y, int radius) {
-        cradius = radius;
-        posx = x;
-        posy = y;
-    }
-
-    /**
-     * Set a square definition for this shape
-     *
-     * @param x The x coordinate of the top-left corner of the square
-     * @param y The y coordinate of the top-left corner of the square
-     * @param width The width and height of the square
-     */
-    public void setSquare(int x, int y, int width) {
-        setRectangle(x, y, width, width);
-    }
-
-    /**
-     * Set a square definition for this shape
-     *
-     * @param x The x coordinate of the top-left corner of the square
-     * @param y The y coordinate of the top-left corner of the square
-     * @param width The width of the rectangle
-     * @param height The height of the rectangle
-     */
-    public void setRectangle(int x, int y, int width, int height) {
-        w = width;
-        h = height;
-        posx = x;
-        posy = y;
-    }
-
-    /**
      * Set a quadrangle definition for this shape
      *
      * @param xa ... The x coordinates of the corner points
      * @param ya ... The y coordinates of the corner points
      */
-    public void setQuadrangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
-        xCoords = new int[]{x1, x2, x3, x4};
-        yCoords = new int[]{y1, y2, y3, y4};
-    }
 
     /**
      * Set a triangle definition for this shape
@@ -114,9 +67,8 @@ public abstract class Shape {
      * @param xa ... The x coordinates of the corner points
      * @param ya ... The y coordinates of the corner points
      */
-    public void setTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-        xCoords = new int[]{x1, x2, x3};
-        yCoords = new int[]{y1, y2, y3};
+    protected boolean isFilled(){
+        return filled;
     }
 
     /**

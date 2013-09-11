@@ -10,16 +10,28 @@ package edu.rug.gogp.javapaint;
  */
 public class Rectangle extends Shape {
 
-        @Override
-        public void draw(PaintContainer pc, int xOffset, int yOffset) {
-            if (filled) {
-                pc.getDrawingArea().fillOval(xOffset + posx - cradius, yOffset + posy - cradius,
-                        cradius * 2, cradius * 2);
-            } else {
-                pc.getDrawingArea().drawOval(xOffset + posx - cradius, yOffset + posy - cradius,
-                        cradius * 2, cradius * 2);
-            }
-            pc.getDrawingArea().setColor(color);
-            pc.repaint();
-        }
+    private int posX, posY;
+    private int width, height;
+
+    public Rectangle(int x, int y, int width, int height) {
+        posX = x;
+        posY = y;
+        this.width = width;
+        this.height = height;
     }
+
+    public Rectangle(int x, int y, int width) {
+        this(x, y, width, width);
+    }
+
+    @Override
+    public void draw(PaintContainer pc, int xOffset, int yOffset) {
+        pc.getDrawingArea().setColor(color);
+        if (isFilled()) {
+            pc.getDrawingArea().fillRect(xOffset + posX, yOffset + posY, width, height);
+        } else {
+            pc.getDrawingArea().drawRect(xOffset + posX, yOffset + posY, width, height);
+        }
+        pc.repaint();
+    }
+}
