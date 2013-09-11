@@ -18,57 +18,49 @@ public class JavaPaint {
         /* Create a paint container */
         PaintContainer pc = new PaintContainer();
 
-        /* set default shape of a open circle */
-        Shape circleForTheI = new Circle(10, 10, 10);
-        circleForTheI.setProperties(false, Color.RED);
-        
-        Shape OuterCircleForP = new Circle(45, 30, 30);
-        OuterCircleForP.setProperties(true, Color.GREEN);
+        // initialisation of Shape's
+        Shape pOuterCircle = new Circle(45, 30, 30);
+        Shape pInnerCircle = new Circle(45, 30, 15);
+        Shape pRectangle = new Rectangle(0, 0, 25, 125);
+        Shape iCircle = new Circle(10, 10, 10);
+        Shape iRectangle = new Rectangle(0, 25, 20, 100);
+        Shape kRectancle = new Rectangle(0, 0, 25, 125);
+        Shape kOuterTriangle = new Polygon(70, 0, 10, 70, 70, 125);
+        Shape kInnerTriangle = new Polygon(70, 20, 40, 70, 70, 105);
+        Shape exclamationPointCircle = new Rectangle(5, 105, 20);
+        Shape exclamationPointQuadriliant = new Polygon(0, 0, 30, 10, 25, 100, 5, 90);
 
-        Shape InnerCircleForP = new Circle(45, 30, 15);
-        InnerCircleForP.setProperties(true, Color.WHITE);
-        
-        /* set default shape of a filled rectangle */
-        Shape rectForI = new Rectangle(0, 25, 20, 100);
-        rectForI.setProperties(true, Color.RED);
-        
-        Shape rectForP = new Rectangle(0, 0, 25, 125);
-        rectForP.setProperties(true, Color.GREEN);
-        
-        Shape rectForK = new Rectangle(0, 0, 25, 125);
-        rectForK.setProperties(true, Color.BLUE);
-        
-        Shape outerTriangleForK = new Polygon(70, 0, 10, 70, 70, 125);
-        outerTriangleForK.setProperties(true, Color.BLUE);
+        // adding properties for Shape's
+        pOuterCircle.setProperties(true, Color.GREEN);
+        pInnerCircle.setProperties(true, Color.WHITE);
+        pRectangle.setProperties(true, Color.GREEN);
+        iCircle.setProperties(false, Color.RED);
+        iRectangle.setProperties(true, Color.RED);
+        kRectancle.setProperties(true, Color.BLUE);
+        kOuterTriangle.setProperties(true, Color.BLUE);
+        kInnerTriangle.setProperties(true, Color.WHITE);
+        exclamationPointQuadriliant.setProperties(true, Color.YELLOW);
+        exclamationPointCircle.setProperties(false, Color.YELLOW);
 
-        Shape innerTriangleForK = new Polygon(70, 20, 40, 70, 70, 105);
-        innerTriangleForK.setProperties(true, Color.WHITE);
-        
-        Shape quadriliantForExlemationPoint = new Polygon(0, 0, 30, 10, 25, 100, 5, 90);
-        quadriliantForExlemationPoint.setProperties(true, Color.YELLOW);
-
-        Shape circleForExlemationPoint = new Rectangle(5, 105, 20);
-        circleForExlemationPoint.setProperties(false, Color.YELLOW);
-
-        /* getting the shape if the letters */
-        Compound charI = new Compound();
-        charI.addShape(circleForTheI);
-        charI.addShape(rectForI);
-
+        // initialisation of Compound's
         Compound charP = new Compound();
-        charP.addShape(OuterCircleForP);
-        charP.addShape(InnerCircleForP);
-        charP.addShape(rectForP);
-
+        Compound charI = new Compound();
         Compound charK = new Compound();
-        charK.addShape(rectForK);
-        charK.addShape(outerTriangleForK);
-        charK.addShape(innerTriangleForK);
-
         Compound exlemationPoint = new Compound();
-        exlemationPoint.addShape(quadriliantForExlemationPoint);
-        exlemationPoint.addShape(circleForExlemationPoint);
+        
+        // adding Shape's to compounds
+        charP.addShape(pOuterCircle);
+        charP.addShape(pInnerCircle);
+        charP.addShape(pRectangle);
+        charI.addShape(iCircle);
+        charI.addShape(iRectangle);
+        charK.addShape(kRectancle);
+        charK.addShape(kOuterTriangle);
+        charK.addShape(kInnerTriangle);
+        exlemationPoint.addShape(exclamationPointQuadriliant);
+        exlemationPoint.addShape(exclamationPointCircle);
 
+        // drawing of the compound's
         charP.draw(pc, 10, 10);
         charI.draw(pc, 80, 55);
         charI.draw(pc, 120, 90);
