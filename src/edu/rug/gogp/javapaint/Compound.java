@@ -15,7 +15,7 @@ public class Compound {
     private ArrayList<Shape> shapes = new ArrayList<>();
 
     /**
-     * Draw the shape in the specified PaintContainer, with a specified extra
+     * Draw the compound in the specified PaintContainer, with a specified extra
      * offset from the top-left corner of the PaintContainer.
      *
      * @param pc the PaintContainer to draw in
@@ -30,7 +30,7 @@ public class Compound {
     }
 
     /**
-     * Draw the shape in the specified PaintContainer, without an extra offset.
+     * Draw the compound in the specified PaintContainer, without an extra offset.
      *
      * @param pc the PaintContainer to draw in
      */
