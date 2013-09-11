@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.image.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 
 /**
  * PaintContainer is used to create a window which can be written to.
@@ -31,6 +30,7 @@ public class PaintContainer extends JFrame {
 		JLabel ga = new GraphicsContainer();
 		ga.setPreferredSize(new Dimension(400, 400));
 		addWindowListener(new WindowAdapter() {
+            @Override
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 			}
@@ -66,6 +66,7 @@ public class PaintContainer extends JFrame {
 	 * method.
 	 */
 	private class GraphicsContainer extends JLabel {
+        @Override
 		public void paint(Graphics g) {
 			Graphics2D g2 = (Graphics2D) g;
 			g2.drawImage(canvasImage, 0, 0, this);

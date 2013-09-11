@@ -17,15 +17,30 @@ public class Shape {
 	 */
 	public static final int SHAPE_COMPOUND = 1;
 
-	public static final int SHAPE_CIRCLE = 0;
+	/**
+     *
+     */
+    public static final int SHAPE_CIRCLE = 0;
 
-	public static final int SHAPE_RECTANGLE = 2;
+	/**
+     *
+     */
+    public static final int SHAPE_RECTANGLE = 2;
 
-	public static final int SHAPE_SQUARE = 3;
+	/**
+     *
+     */
+    public static final int SHAPE_SQUARE = 3;
 
-	public static final int SHAPE_QUADRANGLE = 4;
+	/**
+     *
+     */
+    public static final int SHAPE_QUADRANGLE = 4;
 
-	public static final int SHAPE_TRIANGLE = 5;
+	/**
+     *
+     */
+    public static final int SHAPE_TRIANGLE = 5;
 
 	/* The type of this shape */
 	private int shapeType = SHAPE_COMPOUND;
