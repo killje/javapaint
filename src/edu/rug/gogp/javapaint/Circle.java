@@ -1,12 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.rug.gogp.javapaint;
 
 /**
  *
- * @author s2288842
+ * @author Patrick Beuks (s2288842) & Rik Schaaf (s2391198)
  */
 public class Circle extends Shape {
 
