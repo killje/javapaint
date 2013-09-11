@@ -26,7 +26,7 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw(PaintContainer pc, int xOffset, int yOffset) {
-        pc.getDrawingArea().setColor(color);
+        pc.getDrawingArea().setColor(getColor());
         if (isFilled()) {
             pc.getDrawingArea().fillRect(xOffset + posX, yOffset + posY, width, height);
         } else {

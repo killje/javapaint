@@ -20,7 +20,7 @@ public class Circle extends Shape {
 
     @Override
     public void draw(PaintContainer pc, int xOffset, int yOffset) {
-        pc.getDrawingArea().setColor(color);
+        pc.getDrawingArea().setColor(getColor());
         if (isFilled()) {
             pc.getDrawingArea().fillOval(xOffset + posX - radius, yOffset + posY - radius, radius * 2, radius * 2);
         } else {

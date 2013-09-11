@@ -15,12 +15,12 @@ public class Compound {
     private ArrayList<Shape> shapes = new ArrayList<>();
 
     /**
-     * Draw the shape in the specified paintcontainer, with a specified extra
-     * offset from the top-left corner of the paintcontainer.
+     * Draw the shape in the specified PaintContainer, with a specified extra
+     * offset from the top-left corner of the PaintContainer.
      *
      * @param pc the PaintContainer to draw in
-     * @param xoff the x offset from the top-left corner of pc
-     * @param yoff the y offset from the top-left corner of pc
+     * @param xoff the x offset from the top-left corner of PaintContainer
+     * @param yoff the y offset from the top-left corner of PaintContainer
      */
     public void draw(PaintContainer pc, int xoff, int yoff) {
         for (Shape shape : shapes) {
@@ -30,7 +30,7 @@ public class Compound {
     }
 
     /**
-     * Draw the shape in the specified paintcontainer, without an extra offset.
+     * Draw the shape in the specified PaintContainer, without an extra offset.
      *
      * @param pc the PaintContainer to draw in
      */
@@ -38,6 +38,12 @@ public class Compound {
         draw(pc, 0, 0);
     }
 
+    
+    /**
+     * adds a shape to this compound
+     * 
+     * @param shape the shape that this compound should hold extra
+     */
     public void addShape(Shape shape) {
         shapes.add(shape);
     }
