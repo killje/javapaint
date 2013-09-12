@@ -22,25 +22,31 @@ public class JavaPaint {
         Shape pOuterCircle = new Circle(45, 30, 30);
         Shape pInnerCircle = new Circle(45, 30, 15);
         Shape pRectangle = new Rectangle(0, 0, 25, 125);
+        
         Shape iCircle = new Circle(10, 10, 10);
         Shape iRectangle = new Rectangle(0, 25, 20, 100);
+        
         Shape kRectancle = new Rectangle(0, 0, 25, 125);
         Shape kOuterTriangle = new Polygon(70, 0, 10, 70, 70, 125);
         Shape kInnerTriangle = new Polygon(70, 20, 40, 70, 70, 105);
-        Shape exclamationPointCircle = new Rectangle(5, 105, 20);
+        
+        Shape exclamationPointRectangle = new Rectangle(5, 105, 20);
         Shape exclamationPointQuadriliant = new Polygon(0, 0, 30, 10, 25, 100, 5, 90);
 
         // adding properties for Shape's
         pOuterCircle.setProperties(true, Color.GREEN);
         pInnerCircle.setProperties(true, Color.WHITE);
         pRectangle.setProperties(true, Color.GREEN);
+        
         iCircle.setProperties(false, Color.RED);
         iRectangle.setProperties(true, Color.RED);
+        
         kRectancle.setProperties(true, Color.BLUE);
         kOuterTriangle.setProperties(true, Color.BLUE);
         kInnerTriangle.setProperties(true, Color.WHITE);
+        
         exclamationPointQuadriliant.setProperties(true, Color.YELLOW);
-        exclamationPointCircle.setProperties(false, Color.YELLOW);
+        exclamationPointRectangle.setProperties(false, Color.YELLOW);
 
         // initialisation of Compound's
         Compound charP = new Compound();
@@ -52,13 +58,16 @@ public class JavaPaint {
         charP.addShape(pOuterCircle);
         charP.addShape(pInnerCircle);
         charP.addShape(pRectangle);
+        
         charI.addShape(iCircle);
         charI.addShape(iRectangle);
+        
         charK.addShape(kRectancle);
         charK.addShape(kOuterTriangle);
         charK.addShape(kInnerTriangle);
+        
         exlemationPoint.addShape(exclamationPointQuadriliant);
-        exlemationPoint.addShape(exclamationPointCircle);
+        exlemationPoint.addShape(exclamationPointRectangle);
 
         // drawing of the compound's
         charP.draw(pc, 10, 10);
