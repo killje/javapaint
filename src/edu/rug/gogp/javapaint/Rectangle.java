@@ -9,6 +9,14 @@ public class Rectangle extends Shape {
     private int posX, posY;
     private int width, height;
 
+    /**
+     * Initialize the shape as a rectangle
+     *
+     * @param x sets the x coordinate of the rectangle
+     * @param y sets the y coordinate of the rectangle
+     * @param width sets the width of the rectangle
+     * @param height sets the height of the rectangle
+     */
     public Rectangle(int x, int y, int width, int height) {
         posX = x;
         posY = y;
@@ -16,8 +24,15 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-    public Rectangle(int x, int y, int width) {
-        this(x, y, width, width);
+    /**
+     * Initialize the shape as a square
+     *
+     * @param x sets the x coordinate of the square
+     * @param y sets the y coordinate of the square
+     * @param size sets the size of the square
+     */
+    public Rectangle(int x, int y, int size) {
+        this(x, y, size, size);
     }
 
     @Override
