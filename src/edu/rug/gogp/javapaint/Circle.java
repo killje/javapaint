@@ -8,6 +8,13 @@ public class Circle extends Shape {
 
     int posX, posY, radius;
 
+    /**
+     * Initialize shape as a circle
+     *
+     * @param x sets the x coordinate of the circle
+     * @param y sets the y coordinate of the circle
+     * @param radius sets the radius of the circle
+     */
     public Circle(int x, int y, int radius) {
         posX = x;
         posY = y;
