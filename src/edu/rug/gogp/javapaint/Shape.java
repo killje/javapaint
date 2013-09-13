@@ -14,7 +14,7 @@ public abstract class Shape {
     
     /**
      * 
-     * @return whether or not this shape should be filled
+     * @return boolean on whether or not this shape should be filled
      */
     protected boolean isFilled(){
         return filled;
